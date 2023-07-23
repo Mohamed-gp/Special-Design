@@ -1,0 +1,139 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+:root{
+    --random_color: red;
+}
+@media (min-width: 993px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    width: 480px;
+  }
+}
+/* @media (max-width: 768px) {
+    .container {
+      width: 275px;
+    }
+  } */
+@media (max-width: 768px) {
+  .container {
+    width: 275px;
+  }
+}
+/* Medium */
+/* Large */
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.background {
+    position: relative;
+    height: 100vh;
+    background-color: red;
+    background-image: url(../img/01.jpg);
+    background-size: cover;
+    /* background-position: center center; */
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+.background::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.579);
+    z-index: -5;
+}
+.center-container{
+    margin: auto;
+    position: relative;
+}
+/* start header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10px;
+}
+.logo{
+    color: white;
+    font-weight: bold;
+}
+.menu{
+    display: flex;
+    gap: 15px;
+    color: white;
+}
+.menu a {
+    color: white;
+
+}
+.menu a:hover{
+    color: var(--random_color);
+}
+.rs-menu{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* responsive menu */
+@media (max-width: 992px) {
+    .menu{
+        display: none;
+    }
+}
+@media (min-width: 993px) {
+    .rs-menu{
+        display: none !important;
+    }
+}
+
+.re-menu-child{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding: 5px;
+    margin-top: 20px;
+    background-color: white;
+    display: none;
+
+}
+.re-menu-child li{
+    display: block;
+}
+.re-menu-child li a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 13px;
+    color: var(--random_color);
+    font-weight: 600;
+}
+.re-menu-child li.active{
+    position: relative;
+}
+.re-menu-child li.active::after{
+    content: '';
+    position: absolute;
+    border: 15px solid;
+    border-color: transparent transparent white transparent;
+    right: 3px;
+    top: -34px;
+}
+/* center paragraphs */
+.background > .center-paragraphs{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
