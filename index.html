@@ -27,12 +27,12 @@
         </div>
         <div class="backgrounds-settings">
           <p class="title">Random Backgrounds</p>
-          <button class="yes">Yes</button>
+          <button class="yes active-choice">Yes</button>
           <button class="no">No</button>
         </div>
         <div class="bullets-settings">
           <p class="title">Show Bullets</p>
-          <button class="yes">Yes</button>
+          <button class="yes active-choice">Yes</button>
           <button class="no">No</button>
         </div>
         <button class="reset">Reset Options</button>
@@ -43,7 +43,7 @@
         <div><a href="#our-gallery"></a></div>
         <div><a href="#timeline"></a></div>
         <div><a href="#features"></a></div>
-        <div><a href="#testimonials"></a></div>
+        <div><a href="#testimonial"></a></div>
       </div>
       <div class="setting-rotate">
         <i class="fa-solid fa-gear fa-fw"></i>
@@ -52,21 +52,21 @@
         <header>
           <a href="" class="logo">Special Design</a>
           <ul class="menu">
-            <a href=""><li>About</li></a>
-            <a href=""><li>Skills</li></a>
-            <a href=""><li>Gallery</li></a>
-            <a href=""><li>Timeline</li></a>
-            <a href=""><li>Features</li></a>
-            <a href=""><li>Testimonials</li></a>
+            <a href="#about-us"><li>About</li></a>
+            <a href="#our-skills"><li>Skills</li></a>
+            <a href="#our-gallery"><li>Gallery</li></a>
+            <a href="#timeline"><li>Timeline</li></a>
+            <a href="#features"><li>Features</li></a>
+            <a href="#testimonials"><li>Testimonials</li></a>
           </ul>
           <i class="fa-solid fa-bars rs-menu fa-fw">
             <ul class="re-menu-child" style="position: absolute">
               <li class="active"><a href="">About</a></li>
-              <li><a href="">Skills</a></li>
-              <li><a href="">Gallery</a></li>
-              <li><a href="">Timeline</a></li>
-              <li><a href="">Features</a></li>
-              <li><a href="">Testimonials</a></li>
+              <li><a href="#about-us">Skills</a></li>
+              <li><a href="#our-skills">Gallery</a></li>
+              <li><a href="#our-gallery">Timeline</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
             </ul>
           </i>
         </header>
@@ -282,10 +282,13 @@
         <p class="title">Testimonials</p>
         <div class="testimonials-flex">
           <div class="card-one">
-            <p class="paragraph">Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.</p>
+            <p class="paragraph">
+              Iam very happy with the product its amazing and i recieve it very
+              fast and the price was amazing.
+            </p>
             <div class="profile">
               <div class="img">
-                <img src="img/avatar-01.png" alt="">
+                <img src="img/avatar-01.png" alt="" />
               </div>
               <div class="description">
                 <p class="name">Ahmed Mosaad</p>
@@ -294,33 +297,58 @@
             </div>
           </div>
           <div class="card-two">
-            <p class="paragraph">Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.</p>
+            <p class="paragraph">
+              Iam very happy with the product its amazing and i recieve it very
+              fast and the price was amazing.
+            </p>
             <div class="profile">
               <div class="img">
-                <img src="img/avatar-02.png" alt="">
-              </div>
-              <div class="description">
-                <p class="name">Ahmed Mosaad</p>
-                <p class="job">CEO At Company</p>
-              </div>
-          </div>
-          
-          </div>
-          <div class="card-three">
-            <p class="paragraph">Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.</p>
-            <div class="profile">
-              <div class="img">
-                <img src="img/avatar-03.png" alt="">
+                <img src="img/avatar-02.png" alt="" />
               </div>
               <div class="description">
                 <p class="name">Ahmed Mosaad</p>
                 <p class="job">CEO At Company</p>
               </div>
             </div>
+          </div>
+          <div class="card-three">
+            <p class="paragraph">
+              Iam very happy with the product its amazing and i recieve it very
+              fast and the price was amazing.
+            </p>
+            <div class="profile">
+              <div class="img">
+                <img src="img/avatar-03.png" alt="" />
+              </div>
+              <div class="description">
+                <p class="name">Ahmed Mosaad</p>
+                <p class="job">CEO At Company</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
+    <div class="contact-us" id="contact-us">
+      <div class="container">
+        <p class="title">Contact Us</p>
+        <form action="">
+          <div class="one">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your Phone">
+            <input type="text" placeholder="Your Email">
+            <input type="text" placeholder="Subject">
+          </div>
+          <div class="two">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send">
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p class="end">Created By <span>MohamedGP</span></p>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>

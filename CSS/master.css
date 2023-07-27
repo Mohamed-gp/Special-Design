@@ -151,15 +151,7 @@ header {
 }
 
 /* start Dashboard */
-.dashboard {
-  width: 210px;
-  height: 100vh;
-  position: fixed;
-  background-color: white;
-  text-align: center;
-  z-index: 9999;
-  display: none;
-}
+
 .dashboard > * {
   width: 90%;
 }
@@ -202,9 +194,6 @@ header {
 .dashboard .colors .light-green {
   background-color: #4caf50;
 }
-body {
-  height: 6000px;
-}
 .dashboard .backgrounds-settings {
   background-color: #eeeeee;
   margin: 10px auto;
@@ -214,6 +203,7 @@ body {
 .dashboard .backgrounds-settings > .no,
 .dashboard .bullets-settings .yes,
 .dashboard .bullets-settings .no {
+  opacity: .4;
   font-weight: bold;
   font-size: 14px;
   color: white;
@@ -226,6 +216,9 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   cursor: pointer;
+}
+.active-choice{
+  opacity: 1 !important;
 }
 .dashboard .bullets-settings {
   margin: 0 auto;
@@ -247,15 +240,16 @@ body {
   color: white;
 }
 .setting-rotate {
-  position: absolute;
-  left: 210px;
+  position: fixed;
+  left: 0;
   top: 100px;
   background-color: white;
   padding: 5px;
-  display: none;
+  transition-duration: .5s;
+  cursor: pointer;
 }
 .setting-rotate i {
-  animation-name: rotate;
+  /* animation-name: rotate; */
   animation-iteration-count: infinite;
   animation-duration: 2s;
   animation-timing-function: linear;
@@ -400,7 +394,8 @@ body {
 }
 .our-skills .container > .title,
 .our-gallery .container > .title,
-.features .container > .title {
+.features .container > .title,
+.contact-us .container > .title {
   text-align: center;
   padding: 50px;
   font-weight: bold;
@@ -782,4 +777,90 @@ body {
   .testimonials .container .title{
     text-align: center;
   }
+}
+/* start contact us */
+.contact-us{
+  background-image: url(../img/contact.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.contact-us .container {
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+.contact-us form{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 20px;
+}
+.contact-us form .one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+.contact-us form .one > *{
+  padding: 10px;
+}
+
+.contact-us form .two{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.contact-us form .two textarea{
+  padding: 10px 10px;
+  resize: none;
+}
+.contact-us form .two input{
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--random_color);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.contact-us input,.contact-us textarea{
+  background-color: #f8f8f8;
+  border: 1px solid rgba(0, 0, 0, 0.347);
+}
+.contact-us input:focus,.contact-us textarea:focus{
+  outline: none;
+  border: 1px solid var(--random_color);
+}
+@media (max-width: 768px) {
+  .contact-us form .one{
+    gap: 20px;
+  }
+  .contact-us form .one,
+  .contact-us form .two{
+    width: 100%;
+  }
+  .contact-us form{
+    width: 80%;
+    flex-direction: column;
+  }
+}
+/* start footer */
+footer{
+  text-align: center;
+  background-color: #333;
+  padding: 20px 0;
+  color: white;
+}
+footer p > span{
+  color: var(--random_color);
+}
+.dashboard {
+  width: 210px;
+  height: 100vh;
+  position: fixed;
+  background-color: white;
+  text-align: center;
+  z-index: 9999;
+  transition-duration: .5s;
+  left: -210px;
 }
